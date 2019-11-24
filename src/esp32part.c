@@ -74,7 +74,10 @@ int main(int argc, char **argv) {
                     case 0x00: printf("ota,      "); break;
                     case 0x01: printf("phy,      "); break;
                     case 0x02: printf("nvs,      "); break;
+                    case 0x03: printf("coredump, "); break;
                     case 0x04: printf("nvs_keys, "); break;
+                    case 0x80: printf("esphttpd, "); break;
+                    case 0x81: printf("fat,      "); break;
                     case 0x82: printf("spiffs,   "); break;
                     default: printf("0x%02x,     ", part.subtype); break;
                 }
