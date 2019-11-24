@@ -1,0 +1,2 @@
+bin_PROGRAMS=esp32part
+esp32part_SOURCES=esp32part.c
