@@ -12,22 +12,32 @@ Then convert the binary file to a CSV file (on stdout):
 
 ----
 
-Compilation:
+Compilation
+-----------
 
 1. Autoreconf it:
 
-    autoreconf -fi
+    `autoreconf -fi`
 
 2. Configure it:
 
-    ./configure
+    `./configure`
 
 3. Make it:
 
-    make
+    `make`
 
 4. Install it (optional):
 
-    sudo make install
+    `sudo make install`
 
+Usage
+-----
 
+```
+Usage: src/esp32part [options] <filename.bin>
+  Options:
+    -h: this help text
+    -v: print version and exit
+    -o [filename.csv]: output to file
+```
