@@ -1,0 +1,33 @@
+* Convert a binary ESP32 partition table file into a CSV file
+
+This is a two-step operation.
+
+First extract the partition table from the ESP32 using esptool.py:
+
+    python esptool.py --port /dev/ttyUSB0 read_flash 0x8000 0xc00 partitions.bin
+
+Then convert the binary file to a CSV file (on stdout):
+
+    esp32part partitions.bin
+
+----
+
+Compilation:
+
+1. Autoreconf it:
+
+    autoreconf -fi
+
+2. Configure it:
+
+    ./configure
+
+3. Make it:
+
+    make
+
+4. Install it (optional):
+
+    sudo make install
+
+
