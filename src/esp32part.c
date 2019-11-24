@@ -3,9 +3,15 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <fcntl.h>
-#include <endian.h>
 #include <string.h>
 #include <errno.h>
+
+#ifdef linux
+#include <endian.h>
+#else
+#define le32toh(X) (X)
+#define le16toh(X) (X)
+#endif
 
 struct partition {
     uint16_t magic;
